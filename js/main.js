@@ -25,17 +25,19 @@ function imprimirMensaje(e){
 			mensajeText.classList.add("w-message-text");
 
 			var fecha = new Date();
-	        var hora = fecha.getHours();
-	        var minuto = fecha.getMinutes();
-	        if(minuto < 10) {
-	               minuto = "0" + minuto;
-	        }
+      var hora = fecha.getHours();
+      var minuto = fecha.getMinutes();
 
-	        var horaImprime = hora + " : " + minuto;
-	        var hora = document.createElement("div");
-	        
-	        hora.innerText = horaImprime;
-	        mensajeText.insertBefore(hora, mensajeText.childNodes[1]);
+      if(minuto < 10) {
+          minuto = "0" + minuto;
+      }
+
+      var horaImprime = hora + " : " + minuto;
+      var hora = document.createElement("div");
+
+      hora.innerText = horaImprime;
+      mensajeText.insertBefore(hora, mensajeText.childNodes[1]);
+      hora.classList.add("time");
 		}
 	}
 }
